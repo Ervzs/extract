@@ -1,0 +1,45 @@
+{
+  "smartphone": [
+    "Speaker",
+    "battery",
+    "board",
+    "camera",
+    "charging-port",
+    "rvib",
+    "svib"
+  ],
+  "laptop": [
+    "battery",
+    "fan",
+    "hard-drive",
+    "keyboard",
+    "ram",
+    "ram-covered",
+    "screw",
+    "ssd-covered",
+    "ssd-nvme",
+    "ssd-sata",
+    "wifi-card",
+    "wifi-card-covered"
+  ],
+  "computer": [
+    "HDD",
+    "SSD",
+    "SSD-sata",
+    "case",
+    "cmos",
+    "cooler",
+    "cpu",
+    "fan",
+    "gpu",
+    "mboard",
+    "psu",
+    "ram"
+  ],
+  "router": [
+    "antenna",
+    "phone-board",
+    "phone-speaker",
+    "router-board"
+  ]
+}
