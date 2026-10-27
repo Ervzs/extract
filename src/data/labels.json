@@ -1,13 +1,5 @@
 {
-  "smartphone": [
-    "Speaker",
-    "battery",
-    "board",
-    "camera",
-    "charging-port",
-    "rvib",
-    "svib"
-  ],
+  "smartphone": ["Speaker", "battery", "board", "camera", "charging-port", "rvib", "svib"],
   "laptop": [
     "battery",
     "fan",
@@ -36,10 +28,5 @@
     "psu",
     "ram"
   ],
-  "router": [
-    "antenna",
-    "phone-board",
-    "phone-speaker",
-    "router-board"
-  ]
+  "router": ["antenna", "phone-board", "phone-speaker", "router-board"]
 }
