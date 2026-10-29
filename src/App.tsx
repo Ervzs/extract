@@ -1,4 +1,12 @@
 import { Button } from "@/components/ui/button"
+import labels from "@/data/labels.json"
+import { parts } from "./data/parts"
+
+console.log(
+  Object.values(labels)
+    .flat()
+    .filter((label) => !parts[label]),
+)
 
 export default function App() {
   return (
