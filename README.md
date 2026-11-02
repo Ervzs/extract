@@ -1,32 +1,22 @@
-# React + TypeScript + Vite
+# e-Xtract
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A web app that finds the parts inside an opened device from a photo, then shows how to remove each one safely.
 
-Currently, two official plugins are available:
+This is a solo project. The YOLO11 models it uses were fine-tuned by my thesis group, which I was part of.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pick a device, pick a photo, and you get a box around each part it finds, a cropped picture of the part, any hazard to watch out for, and the steps to take it out.
 
-## React Compiler
+Everything runs in the browser with onnxruntime-web, so there's no server and your photo never leaves your device.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Built with React, TypeScript, Vite, Tailwind, shadcn/ui and TanStack Query.
 
-## Expanding the Oxlint configuration
+## Models
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Four YOLO11 object detection models, fine-tuned by our thesis group on photos of opened devices. I exported them to ONNX so they run in the browser.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+| Model | Base | Parts |
+|---|---|---|
+| Smartphone | YOLO11s | speaker, battery, board, camera, charging port, vibration motors |
+| Laptop | YOLO11s | battery, fan, hard drive, keyboard, RAM, screws, SSDs, Wi-Fi card |
+| Computer | YOLO11m | HDD, SSDs, case, CMOS battery, cooler, CPU, fan, GPU, motherboard, PSU, RAM |
+| Telecom | YOLO11s | antenna, phone board, phone speaker, router board |
