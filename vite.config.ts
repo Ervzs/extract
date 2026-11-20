@@ -6,6 +6,7 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
+  base:"/extract/",
   plugins: [codeInspectorPlugin({ bundler: "vite" }), react(), tailwindcss()],
   resolve: {
     alias: {
